@@ -4,10 +4,18 @@ const accountRoutes = require('./routes/accountRoutes');
 const transactionRoutes = require('./routes/transactionRoutes');
 const authRoutes = require('./routes/authRoutes');
 const errorHandler = require('./middlewares/errorHandler');
+const accountRoutes = require('./routes/accountRoutes');
 
 const app = express();
 
 app.use(express.json());
+app.use('/v1/users', userRoutes);
+app.use('/v1/accounts', accountRoutes);
+app.use('/v1/accounts', transactionRoutes);
+app.use('/v1/auth', authRoutes);
+app.use('/v1/accounts', accountRoutes);
+
+
 app.use(errorHandler);
 
 module.exports = app;
