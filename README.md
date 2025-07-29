@@ -54,7 +54,7 @@ npm test
 ```
 ### Tests cover:
 
-- User registratiion and login
+- User registration and login
 
 - Authenticated CRUD for accounts
 
@@ -101,7 +101,7 @@ npm test
 
 - Passwords are hashed with bcrypt
 
-- Joi is used to validate incoming request bodieys
+- Joi is used to validate incoming request bodies
 
 - Prisma includes referential integrity between users, accounts, and transactions
 
