@@ -25,6 +25,7 @@ npm install
 ```
 
 ### 2. Set up Environment Variables
+
 - Create a .env file in the root directory:
 
 ```.env
@@ -65,9 +66,11 @@ npm test
 ## API Endpoints Overview
 
 ### Auth
+
 `POST /v1/auth/login` – Login with email/password
 
 ### Users
+
 `POST /v1/users` – Register a new user
 
 `GET /v1/users/:userId` – Get user profile (auth required)
@@ -77,6 +80,7 @@ npm test
 `DELETE /v1/users/:userId` – Delete user (auth required)
 
 ### Accounts
+
 `POST /v1/accounts` – Create account (auth required)
 
 `GET /v1/accounts` – List user accounts (auth required)
@@ -88,6 +92,7 @@ npm test
 `DELETE /v1/accounts/:id` – Delete account (only if no transactions)
 
 ### Transactions
+
 `POST /v1/accounts/:accountId/transactions` – Create transaction (deposit/withdrawal)
 
 `GET /v1/accounts/:accountId/transactions` – List all transactions
@@ -95,6 +100,7 @@ npm test
 `GET /v1/accounts/:accountId/transactions/:transactionId` – Get single transaction
 
 ### Notes
+
 - JWT must be sent via Authorization: Bearer <token> header
 
 - Users can only access their own accounts and transactions
