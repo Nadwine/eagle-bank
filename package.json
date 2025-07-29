@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "npx nodemon server.js",
     "test": "cross-env NODE_ENV=test jest --runInBand",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix"
   },
   "dependencies": {
     "@prisma/client": "^6.12.0",
@@ -20,6 +22,7 @@
   "devDependencies": {
     "@eslint/js": "^9.32.0",
     "cross-env": "^10.0.0",
+    "eslint": "^9.32.0",
     "globals": "^16.3.0",
     "jest": "^30.0.5",
     "nodemon": "^3.1.0",
