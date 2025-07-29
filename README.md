@@ -11,6 +11,7 @@ This project is a secure and testable RESTful API for managing users, bank accou
 - **JWT-based authentication**
 - **Jest** for automated testing
 - **Joi** for request validation
+- **ESLint** for code quality and consistency
 
 ---
 
@@ -43,12 +44,16 @@ npx prisma migrate dev --name init
 ```bash
 npx prisma generate
 ```
-4. Start the Server
+### 4. Start the Server
 
 ```bash
 npm run dev
 ```
-## Running Tests
+## Tests
+
+The test suite includes full integration tests using Jest and Supertest. All API endpoints are tested with real database interactions. 
+
+### Running Tests
 
 ```bash
 npm test
