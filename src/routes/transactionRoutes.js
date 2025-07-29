@@ -3,7 +3,7 @@ const router = express.Router({ mergeParams: true });
 const transactionController = require('../controllers/transactionController');
 const authMiddleware = require('../middlewares/authMiddleware');
 const validate = require('../middlewares/validate');
-const { createTransactionSchema } = require('../validations/transactionSchemas');
+const { createTransactionSchema } = require('../validations/joiSchemas');
 
 router.use(authMiddleware);
 

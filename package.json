@@ -1,23 +1,13 @@
 {
   "name": "eagle-bank",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "type": "commonjs",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "npx nodemon server.js",
+    "test": "cross-env NODE_ENV=test jest --runInBand",
+    "postinstall": "prisma generate"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Nadwine/eagle-bank.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Nadwine/eagle-bank/issues"
-  },
-  "homepage": "https://github.com/Nadwine/eagle-bank#readme",
   "dependencies": {
     "@prisma/client": "^6.12.0",
     "bcrypt": "^6.0.0",
@@ -25,11 +15,13 @@
     "express": "^5.1.0",
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
-    "knex": "^3.1.0",
-    "pg": "^8.16.3"
+    "pg": "^8.11.3"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10",
-    "prisma": "^6.12.0"
+    "cross-env": "^10.0.0",
+    "jest": "^30.0.5",
+    "nodemon": "^3.1.0",
+    "prisma": "^6.12.0",
+    "supertest": "^7.1.4"
   }
 }
